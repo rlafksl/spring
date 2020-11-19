@@ -1,0 +1,24 @@
+package com.example.domain;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.example.mapper.ProductMapper;
+
+@Service
+public class ProductService {
+	@Autowired
+	ProductMapper mapper;
+	
+	@Transactional
+	public void insert(ProductVO vo){
+		mapper.insert(vo);
+		String[] images=vo.getImages();
+		if(images.length>0){
+			for(String image:images){
+					mapper.insertImage(image);
+			}
+		}
+	}
+}

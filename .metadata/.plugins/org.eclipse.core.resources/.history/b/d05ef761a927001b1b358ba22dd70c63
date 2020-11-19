@@ -1,0 +1,7 @@
+package mapper;
+
+public class Snippet {
+	insert into tbl_trade(ano, type, tradNo, amount) 
+	values('1001' ,'Ãâ±İ' , '1002', 50);
+}
+

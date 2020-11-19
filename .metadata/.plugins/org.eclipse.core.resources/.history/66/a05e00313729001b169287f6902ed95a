@@ -1,0 +1,25 @@
+package com.example.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.example.domain.ProductVO;
+import com.example.mapper.ProductMapper;
+
+@Controller
+public class ProductController {
+	@Autowired //똑같은 것들 자동으로 주입
+	ProductMapper mapper;
+	
+	@Resource(name="")
+	
+	@RequestMapping("insert")
+	public void insert(){
+	
+	}
+	@RequestMapping("insert")
+	public void insertPost(ProductVO vo){
+		
+	}
+}
